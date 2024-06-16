@@ -1,0 +1,173 @@
+
+.loader{
+    position: fixed;
+    left: 2px;
+
+}
+
+
+.skills {
+    position: absolute;
+    right: 25%;
+    top: 33%;
+    transform: translateY(-30%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-left: 15px;
+
+    .skill {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        h1 {
+            font-size: 2vw;
+            
+        }
+
+        .icon-container {
+            font-size: 2vw;
+        }
+
+        .progress-bar {
+            font-size: 1vw;
+            font-family: monospace;
+            margin: 0;
+            border: 2px solid #2b2927;
+            background-color: transparent;
+            color: transparent;
+            position: relative;
+            width: 10vw;
+            font-weight: bold;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                background: #393735;
+                width: 0; /* Start with no width */
+                animation: typewriter-tf 5s forwards; /* Default animation */
+                animation-delay: 3s; /* Delay for all bars */
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                border: 2px solid brown;
+                background-color: brown;
+                animation: slide-right 3s forwards;
+                animation-delay: 3s; /* Start after the progress bar animation */
+            }
+        }
+    }
+
+    .skill-javascript .progress-bar::before {
+        animation-duration: 1.5s; /* Adjusted duration */
+        animation-delay: 1s;
+        width: 60%; /* Target width */
+    }
+
+    .skill-html .progress-bar::before {
+        animation-duration: 2.4s;
+        animation-delay: 1s;
+        width: 80%;
+    }
+
+    .skill-css .progress-bar::before {
+        animation-duration: 2.1s;
+        animation-delay: 1s;
+        width: 70%;
+    }
+
+    .skill-nodejs .progress-bar::before {
+        animation-duration: 0.9s;
+        animation-delay: 1s;
+        width: 30%;
+    }
+
+    .skill-sql .progress-bar::before {
+        animation-duration: 0.45s;
+        animation-delay: 1s;
+        width: 15%;
+    }
+}
+
+/* Keyframes for filling animation */
+@keyframes typewriter-tf {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%; /* The final width will be overridden by the width in each ::before */
+    }
+}
+
+/* Keyframes for sliding box animation */
+@keyframes slide-right {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+
+
+.text-animate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s forwards;
+  min-width: 10px;
+}
+
+.text-animate-hover {
+  min-width: 10px;
+  display: inline-block;
+  animation-fill-mode: both;
+
+  &:hover {
+    animation: rubberBand 1s;
+    color: rgb(60, 199, 136);
+  }
+}
+
+@for $i from 1 through 50 {
+  .text-animate._#{$i} {
+    animation-delay: #{$i / 10}s;
+  }
+}
+
+@keyframes bounceInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-2000px);
+    }
+    60% {
+       opacity: 1;
+       transform: translateY(30px);
+    }
+    80% {
+       transform: translateY(-10px);
+    }
+    100% {
+       transform: translateY(0);
+    }
+ } 
+
+ .loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    // transform: translate(-50%, -50%);
+    z-index: 9999; /* Ensure it appears above other content */
+}

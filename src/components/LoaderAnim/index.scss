@@ -1,0 +1,52 @@
+/* HTML: <div class="loader"></div> */
+.loader {
+    position: flex;
+    left: 35%;
+    top: 45%;
+    width: 1vw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: rgb(121, 161, 135);
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .5s ease-out, visiblity .5s linear;
+    animation: l10 2s infinite linear, fadeOut 1s 2s;
+    animation-fill-mode: forwards;
+    // animation: fadeOut 1s 1s;
+  }
+
+//   .loader.hidden{
+//     opacity: 0;
+//     // visibility: hidden;
+//   }
+
+  @keyframes l10 {
+    0%    {box-shadow: 
+            0 -30px #acabaa, calc(30px*0.707) calc(-30px*0.707) #393735,30px 0 #bbe7c3, 0 0 #393735,
+            0 0 #bbe7c3, 0 0 #393735,0 0 #bbe7c3, 0 0 #393735}
+    12.5% {box-shadow: 
+            0 0 #bbe7c3, calc(30px*0.707) calc(-30px*0.707) #393735,30px 0 #bbe7c3, calc(30px*0.707) calc(30px*0.707) #393735,
+            0 0 #acabaa, 0 0 #393735,0 0 #bbe7c3, 0 0 #393735}
+    25%   {box-shadow: 
+            0 0 #acabaa, 0 0 #393735,30px 0 #bbe7c3, calc(30px*0.707) calc(30px*0.707) #393735,
+            0 30px #acabaa, 0 0 #393735,0 0 #bbe7c3, 0 0 #393735}
+    37.5% {box-shadow: 
+            0 0 #acabaa, 0 0 #393735,0 0 #bbe7c3, calc(30px*0.707) calc(30px*0.707) #393735,
+            0 30px #acabaa, calc(-30px*0.707) calc(30px*0.707) #393735,0 0 #bbe7c3, 0 0 #393735}
+    50%   {box-shadow: 
+            0 0 #bbe7c3, 0 0 #393735,0 0 #bbe7c3, 0 0 #393735,
+            0 30px #bbe7c3, calc(-30px*0.707) calc(30px*0.707) #393735,-30px 0 #bbe7c3, 0 0 #393735}
+    62.5% {box-shadow: 
+            0 0 #bbe7c3, 0 0 #393735,0 0 #bbe7c3, 0 0 #393735,
+            0 0 #bbe7c3, calc(-30px*0.707) calc(30px*0.707) #393735,-30px 0 #bbe7c3, calc(-30px*0.707) calc(-30px*0.707) #393735}
+    75%   {box-shadow: 
+            0 -30px #bbe7c3, 0 0 #393735,0 0 #bbe7c3, 0 0 #393735,
+            0 0 #acabaa, 0 0 #393735,-30px 0 #bbe7c3, calc(-30px*0.707) calc(-30px*0.707) #393735}
+    87.5% {box-shadow: 
+            0 -30px #acabaa, calc(30px*0.707) calc(-30px*0.707) #393735,0 0 #bbe7c3, 0 0 #393735,
+            0 0 #acabaa, 0 0 #393735,0 0 #bbe7c3, calc(-30px*0.707) calc(-30px*0.707) #393735}
+    100%  {box-shadow: 
+            0 -30px #acabaa, calc(30px*0.707) calc(-30px*0.707) #393735,30px 0 #bbe7c3, 0 0 #393735,
+            0 0 #acabaa, 0 0 #393735,0 0 #acabaa, 0 0 #393735}
+  
+  }

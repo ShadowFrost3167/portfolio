@@ -1,0 +1,215 @@
+:root{
+    --typewriterSpeed: 5s;
+}
+
+.parent-container{
+    text-align: right;
+    margin-right: 350px;
+    margin-top: 275px;
+    margin-bottom: 30px;
+    
+
+    
+}
+
+.logo-container {
+    display: inline-block;
+    width: max-content;
+    
+}
+
+.text1{
+    font-size: clamp(1.5rem, 2vw, 4rem);
+    letter-spacing: 11px;
+    font-family:  monospace;
+    // border-right: 5px solid;
+    color: rgba(48, 44, 34, 0.661);
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    // right: 0;
+    display: block;
+    // background: #554f4a;
+    top: 65%;
+    left: 0;
+    
+    text-align: left;
+    
+}
+
+.text1::before,
+.text1::after {
+
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+}
+
+.text1::before{
+    background: #554f4a;;
+    animation:
+        typewriter calc(var(--typewriterSpeed) + 2s) steps(27) .5s forwards;
+    animation-delay: 5.3s;
+}
+
+.text1::after{
+    width: .125em; 
+    background: transparent;
+    animation:
+    typewriter calc(var(--typewriterSpeed) + 2s) steps(27) .5s forwards,
+    blinky 350ms steps(27) infinite;
+    animation-delay: 5.3s;
+}
+.text2{
+    font-size: clamp(1.5rem, 2vw, 4rem);
+    letter-spacing: 11px;
+    font-family:  monospace;
+    // border-right: 5px solid;
+    color: rgba(48, 44, 34, 0.661);
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    right: 0;
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+    
+}
+
+.text2::before,
+.text2::after {
+
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+}
+
+.text2::before{
+    background: #554f4a;;
+    animation:
+        typewriter calc(var(--typewriterSpeed) + 2s) steps(27) .5s forwards;
+    animation-delay: 11s;
+}
+
+.text2::after{
+    width: .125em; 
+    background: transparent;
+    animation:
+    typewriter calc(var(--typewriterSpeed) + 2s) steps(27) .5s forwards,
+    blinky 350ms steps(27) infinite;
+    animation-delay: 11s;
+}
+.text3{
+    font-size: clamp(1.5rem, 2vw, 4rem);
+    letter-spacing: 11px;
+    font-family:  monospace;
+    // border-right: 5px solid;
+    color: rgba(48, 44, 34, 0.661);
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    right: 0;
+    display: block;
+    text-align: left;
+    top: 80%;
+}
+
+.text3::before,
+.text3::after {
+
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+}
+
+.text3::before{
+    background: #554f4a;;
+    animation:
+        typewriter calc(var(--typewriterSpeed) + 2s) steps(27) .5s forwards;
+    animation-delay: 19s;
+}
+
+.text3::after{
+    width: .125em; 
+    background: transparent;
+    animation:
+    typewriter calc(var(--typewriterSpeed) + 2s) steps(27) .5s forwards,
+    blinky 350ms steps(27) infinite;
+    animation-delay: 19s;
+}
+.text4{
+    font-size: clamp(1.5rem, 2vw, 4rem);
+    letter-spacing: 11px;
+    font-family:  monospace;
+    // border-right: 5px solid;
+    color: rgba(48, 44, 34, 0.661);
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    right: 0;
+    display: block;
+    text-align: left;
+    top: 80%;
+}
+
+.text4::before,
+.text4::after {
+
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+}
+
+.text4::before{
+    background: #554f4a;;
+    animation:
+        typewriter calc(var(--typewriterSpeed) + 2s) steps(27) .5s forwards;
+    animation-delay: 27s;
+}
+
+.text4::after{
+    width: .125em; 
+    background: transparent;
+    animation:
+    typewriter calc(var(--typewriterSpeed) + 2s) steps(27) .5s forwards,
+    blinky 350ms steps(27) infinite;
+    animation-delay: 27s;
+}
+
+
+
+
+
+
+@keyframes typewriter {
+    to { left: 100%; }
+}
+
+@keyframes blinky {
+    0% { 
+        opacity: 1; /* Initially visible */
+        background: transparent; /* Transparent before typing starts */
+    }
+    55% {
+        background: black; /* Start blinking */
+    }
+    50%,
+    100% {
+        background: transparent; /* Blinking effect */
+    }
+}
+
+
+

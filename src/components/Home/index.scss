@@ -1,0 +1,101 @@
+.home-page{
+
+    position: absolute;
+    top: 11;
+    left: 85px; 
+    width: calc(100% - 85px); 
+    height: 100%; 
+
+    .text-zone{
+        position: absolute;
+        left: 17px;
+        top: 0;
+        transform: translateY(50%);
+        width: calc(100% - 85px);
+        max-height: 9%;
+    }
+
+    h1{
+        color: white;
+        font-size: 5vw;
+        margin: 0;
+        font-family: 'Coolvetica';
+        font-weight: 400;
+        
+        
+
+        &::before{
+            content: '';
+            font-family: '';
+            color: rgb(60, 199, 136);
+            opacity: .6;
+            position: absolute;
+            margin-top: -40px;
+            
+            font-size: 18px;
+            font: 'Verdana, sans-serif';
+        }
+
+        &::after{
+            content: '';
+            font: 'Verdana, sans-serif';
+            color: rgb(60, 199, 136);
+            font-size: 18px;
+            position: absolute;
+            margin-top: 18px;
+            margin-left: 10px;
+            animation: fadeIn 1s 1.7s backwards;
+            opacity: .6;
+
+
+        }
+        img{
+            width: 70px;
+            margin-left: 5px;
+            
+            right: 100%;
+            margin-top: 10px;
+            position: left;
+            opacity: 0;
+            height: 80px;
+            animation: shadey 3s linear infinite;
+            animation-delay: 1.4s;
+
+        }
+    }
+    h2{
+        color: #627062;
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 2vw;
+        font: 'Verdana, sans-serif';
+        letter-spacing: 3px;
+        animation: fadeIn 2.5s 1.7s backwards;
+    }
+
+    .flat-button{
+        color:rgb(60, 199, 136);
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        font-family: 'Verdana, sans-serrif';
+        text-decoration: none;
+        padding: 10px 18px;
+        border: 1px solid rgb(60, 199, 136);
+        margin-top: 15px;
+        float: left;
+        animation: fadeIn 1s 1.8s backwards;
+
+        &:hover{
+            background-color: rgb(60, 199, 136);
+            color: black;
+        }
+    }
+}
+
+@keyframes shadey{
+    0% { opacity: .3; }
+    50% { opacity: 1; }
+    100% { opacity: .3;}    
+}
+
